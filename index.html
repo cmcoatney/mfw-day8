@@ -10,11 +10,548 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- stylesheet placed after bootstrap can extend/override its classes -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Main Point</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <h1><i class="fa-solid fa-table"></i> Tables</h1></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#semantic">Semantic</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#responsive">Responsive</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="semantic">
+
+      <div class="col-12 bg-light text-center">
+        <hr />
+        <br />
+        <h4>Semantic Tables</h4>
+        <br />
+        <hr />
+      </div>
+  
+      <table class="table caption-top">
+        <caption class="col-12 text-center">
+          <h4>"Refresher on Tables" Table</h4>
+        </caption>
+        <thead class="table-primary">
+          <tr>
+            <th scope="col-1">#</th>
+            <th scope="col-2">Tag</th>
+            <th scope="col-9">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>
+              <pre><code>&lt;table&gt;</code></pre>
+            </td>
+            <td>Defines a table</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>
+              <pre><code>&lt;th&gt;</code></pre>
+            </td>
+            <td>Defines a header cell in a table</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>
+              <pre><code>&lt;tr&gt;</code></pre>
+            </td>
+            <td>Defines a row in a table</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>
+              <pre><code>&lt;td&gt;</code></pre>
+            </td>
+            <td>Defines a cell in a table</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>
+              <pre><code>&lt;colgroup&gt;</code></pre>
+            </td>
+            <td>Specifies a group of one or more columns for formatting</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>
+              <pre><code>&lt;col&gt;</code></pre>
+            </td>
+            <td>
+              Specifies column properties for each column within the colgroup
+              element
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>
+              <pre><code>&lt;caption&gt;</code></pre>
+            </td>
+            <td>Defines a table caption</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>
+              <pre><code>&lt;thead&gt;</code></pre>
+            </td>
+            <td>Groups the header conent in a table</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>
+              <pre><code>&lt;tbody&gt;</code></pre>
+            </td>
+            <td>Groups the body conent in a table</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>
+              <pre><code>&lt;tfoot&gt;</code></pre>
+            </td>
+            <td>Groups the footer conent in a table</td>
+          </tr>
+        </tbody>
+        <tfoot class="table-primary">
+          <tr>
+            <td colspan="4" class="text-center">
+              <figure class="figure">
+                <figcaption class="figure-caption text-right">
+                  fig-1. A standard table definition w/ Bootstrap 5 styling
+                </figcaption>
+              </figure>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+  
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            type="button"
+            id="tabList-1"
+            class="nav-link active"
+            data-bs-toggle="tab"
+            data-bs-target="#tabList-pane-1"
+            role="tab"
+            aria-controls="tabList-pane-1"
+            aria-selected="true"
+          >
+            Colors
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            type="button"
+            id="tabList-2"
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#tabList-pane-2"
+            role="tab"
+            aria-controls="tabList-pane-2"
+            aria-selected="false"
+          >
+            Accent
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            type="button"
+            id="tabList-3"
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#tabList-pane-3"
+            role="tab"
+            aria-controls="tabList-pane-3"
+            aria-selected="false"
+          >
+            Border
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            type="button"
+            id="tabList-4"
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#tabList-pane-4"
+            role="tab"
+            aria-controls="tabList-pane-4"
+            aria-selected="false"
+          >
+            Special
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            type="button"
+            id="tabList-5"
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#tabList-pane-5"
+            role="tab"
+            aria-controls="tabList-pane-5"
+            aria-selected="false"
+          >
+            Head & Foot
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            type="button"
+            id="tabList-6"
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#tabList-pane-6"
+            role="tab"
+            aria-controls="tabList-pane-6"
+            aria-selected="false"
+          >
+            Vertical
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div
+          id="tabList-pane-1"
+          class="tab-pane active"
+          role="tabpanel"
+          aria-labelledby="tabList-1"
+        >
+          <!-- colors -->
+          <ul>
+            <li>Table</li>
+            <li>Row</li>
+            <li>Column</li>
+          </ul>
+          <table class="table table-primary">
+            <thead>
+              <tr class="table-success">
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td class="table-danger">Tom</td>
+                <td>Bombadil</td>
+                <td>@merryfellow</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Frodo</td>
+                <td>Baggins</td>
+                <td>@ringbearer</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Gandalf the Grey</td>
+                <td>@olorin</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div
+          id="tabList-pane-2"
+          class="tab-pane"
+          role="tabpanel"
+          aria-labelledby="tabList-2"
+        >
+          <!-- accent -->
+          <ul>
+            <li>Striped</li>
+            <li>Hover</li>
+            <li>Active</li>
+          </ul>
+          <table class="table table-light table-striped table-hover">
+            <thead>
+              <tr class="">
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Tom</td>
+                <td>Bombadil</td>
+                <td>@merryfellow</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td class="table-active">Frodo</td>
+                <td>Baggins</td>
+                <td>@ringbearer</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Gandalf the Grey</td>
+                <td>@olorin</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div
+          id="tabList-pane-3"
+          class="tab-pane"
+          role="tabpanel"
+          aria-labelledby="tabList-3"
+        >
+          <!-- border -->
+          <ul>
+            <li>Border</li>
+            <li>Colored Border</li>
+            <li>Borderless</li>
+          </ul>
+          <table class="table table-border border-primary">
+            <thead>
+              <tr class="">
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Tom</td>
+                <td>Bombadil</td>
+                <td>@merryfellow</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Frodo</td>
+                <td>Baggins</td>
+                <td>@ringbearer</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Gandalf the Grey</td>
+                <td>@olorin</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+        <div
+          id="tabList-pane-4"
+          class="tab-pane"
+          role="tabpanel"
+          aria-labelledby="tabList-4"
+        >
+          <!-- special-->
+  
+          <ul>
+            <li>Small Tables</li>
+            <li>Nested Tables</li>
+          </ul>
+          <table class="table table-sm">
+            <thead>
+              <tr class="">
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Tom</td>
+                <td>Bombadil</td>
+                <td>@merryfellow</td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <table class="table table-primary table-striped mb-0">
+                    <thead>
+                      <tr class="">
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Nested</td>
+                        <td>Table</td>
+                        <td>@notinherited</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Gandalf the Grey</td>
+                <td>@olorin</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div
+          id="tabList-pane-5"
+          class="tab-pane"
+          role="tabpanel"
+          aria-labelledby="tabList-5"
+        >
+
+        <!-- head & foot-->
+          <table class="table">
+            <thead class="table-primary">
+              <tr class="">
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Tom</td>
+                <td>Bombadil</td>
+                <td>@merryfellow</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Frodo</td>
+                <td>Baggins</td>
+                <td>@ringbearer</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Gandalf the Grey</td>
+                <td>@olorin</td>
+              </tr>
+            </tbody>
+            <tfoot class="table-primary">
+              <tr>
+                <td>Footer</td>
+                <td>Footer</td>
+                <td>Footer</td>
+                <td>Footer</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+  
+        <div
+          id="tabList-pane-6"
+          class="tab-pane"
+          role="tabpanel"
+          aria-labelledby="tabList-6"
+        >
+          <!-- vertical -->
+          <table class="table align-middle">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Country</th>
+                <th scope="col">Language</th>
+                <th scope="col">Capital</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>England</td>
+                <td>English</td>
+                <td>
+                  ALIGN MIDDLE @ Table. This is just a lot of text to demonstrate
+                  the vertical alignment of this table. Lorem ipsum dolor sit
+                  amet. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil nobis commodi pariatur possimus sit officiis eius minima
+                  voluptas, animi ipsum.
+                </td>
+              </tr>
+              <tr class="align-bottom">
+                <th scope="row">2</th>
+                <td>France</td>
+                <td>French</td>
+                <td>
+                  This ROW is aligned BOTTOM. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit. In laoreet pellentesque lorem sed
+                  elementum. Suspendisse maximus convallis ex. Etiam eleifend
+                  velit leo.is
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Germany</td>
+                <td class="align-top">German</td>
+                <td>
+                  This COLUMN is aligned to the TOP. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Quod adipisci, impedit ratione,
+                  necessitatibus, voluptatum repellendus iste at a dicta non
+                  laudantium eligendi facere sapiente quidem reprehenderit
+                  voluptate laborum vero deserunt sit cupiditate! Dolores esse,
+                  molestiae quam odit necessitatibus sint illum.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="responsive">
+      <div class="col-12 bg-light text-center">
+        <hr />
+        <br />
+        <h4>Responsive Tables</h4>
+        <br />
+        <hr />
+      </div>
+
+
+
+    </section>
 
     <section class="footer"></section>
     <script
